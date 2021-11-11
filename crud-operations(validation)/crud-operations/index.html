@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- local style -->
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-div">
+        <h2> Registration Form </h2>
+    <!-- first Name -->
+
+        <form class="needs-validation" onsubmit="onSubmit()" novalidate>
+            <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="fname">First name</label>
+                <input type="text" class="form-control " name= "fname" id="fname" placeholder="First name" onchange="onChange(this)">
+                <div class="valid-feedback">
+                <!-- looking good! -->
+                </div>
+            </div>
+
+    <!-- last name -->
+
+            <div class="col-md-4 mb-3">
+                <label for="lname">Last name</label>
+                <input type="text" class="form-control lname" name= "lname" id="lname" placeholder="Last name" onchange="onChange(this)">
+                <div class="valid-feedback">
+                <!-- looking good! -->
+                </div>
+            </div>
+
+            </div>
+
+    <!-- email -->
+
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label for="email">Email</label>
+                    <div class="input-group">
+                    <input type="email" class="form-control" name= "email" id="email" placeholder="Email" onchange="onChange(this)">
+                    <div class="invalid-feedback">
+                        Please choose a Email.
+                    </div>
+                    </div>
+                </div>
+
+    <!-- city -->
+
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <select class="custom-select" name= "city" id="city" onchange="onChange(this)">
+                        <option value="">Open this select menu</option>
+                        <option value="surat">surat</option>
+                        <option value="ahemdabad">ahemdabad</option>
+                        <option value="vadodara">vadodara</option>
+                    </select>
+                    <div class="invalid-feedback">Invalid custom select</div>
+                </div>
+
+    <!-- contact -->
+
+            <div class="col-md-3 mb-3">
+                <label for="contact">Contact</label>
+                <input type="number" class="form-control" name= "contact" id="contact" placeholder="Contact" onchange="onChange(this)">
+                <div class="invalid-feedback">
+                Please provide a Contact.
+                </div>
+            </div>
+            </div>
+
+    <!-- gender -->
+
+            <label for="gender">Gender</label><br/>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender" id="male" value="male" onchange="onChange(this)">
+                <label class="form-check-label" for="">
+                    male
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender" id="female" value="female" onchange="onChange(this)">
+                <label class="form-check-label" for="">
+                    female
+                </label>
+            </div>
+
+    <!-- Hobby -->
+
+            <label for="inputHobby">Hobby</label>
+            <div class="form-group col-md-5">
+                <div class="form-check form-check-inline">
+                <input class="form-check-input hobby" type="checkbox" name="Football" id="Football" value="Football" onchange="onChangeHobby(this)">
+                <label class="form-check-label" for="Football">Football</label>
+                </div>
+                <div class="form-check form-check-inline">
+                <input class="form-check-input hobby" type="checkbox" name="Cricket" id="Cricket" value="Cricket" onchange="onChangeHobby(this)">
+                <label class="form-check-label" for="Cricket">Cricket</label>
+                </div>
+                <div class="form-check form-check-inline">
+                <input class="form-check-input hobby" type="checkbox" name="Basketball" id="Basketball" value="Basketball" onchange="onChangeHobby(this)">
+                <label class="form-check-label" for="Basketball">Basketball</label>
+                </div>
+                <div class="form-check form-check-inline">
+                <input class="form-check-input hobby " type="checkbox"  name="Tennis" id="Tennis" value="Tennis" onchange="onChangeHobby(this)">
+                <label class="form-check-label" for="Tennis">Tennis</label>
+                </div>
+            </div>
+        
+
+    <!-- checkbox -->
+
+            <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                <label class="form-check-label" for="invalidCheck">
+                Agree to terms and conditions
+                </label>
+                <div class="invalid-feedback">
+                You must agree before submitting.
+                </div>
+            </div>
+            </div>
+
+    <!-- submit-button-->
+
+            <button class="btn btn-primary" type="submit"  id="submit">Submit form</button>
+
+        </div>
+    
+        </form>
+        
+        <table class="table table-striped ">
+            <thead>
+            <tr>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">City</th>
+                <th scope="col">contact</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Hobby</th>
+                <th scope="col">Action</th>
+            </tr>
+            </thead>
+            <tbody id="tbody">
+                
+            </tbody>
+        </table>
+
+        </div>
+    <!-- validation -->
+        <!-- <script>
+        // field -validation
+
+        </script> -->
+
+        <script src="index.js"></script>
+</body>
+</html>
